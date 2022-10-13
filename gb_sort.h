@@ -24,5 +24,8 @@ void sort00_initArray(Array* array);
 //直接插入排序
 void sort02_InsertSort(Array* array, myInt len);
 
+//折半插入排序
+void sort03_InsertSort2(Array* array, myInt len);
+
 
 #endif
