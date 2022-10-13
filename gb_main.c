@@ -1,4 +1,4 @@
-#include"main.h"
+#include"gb_main.h"
 
 int main()
 {
