@@ -30,5 +30,8 @@ void sort03_InsertSort2(Array* array, myInt len);
 //冒泡排序
 void sort04_BubbleSort(Array* array, myInt len);
 
+//快速排序
+void sort05_QuickSort(Array* array, myInt low, myInt high);
+
 
 #endif

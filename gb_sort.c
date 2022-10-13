@@ -129,3 +129,45 @@ void sort04_BubbleSort(Array* array, myInt len)
     printf("BubbleSort End...\n");
 }
 
+
+//快速排序
+void sort05_QuickSort(Array* array, myInt left, myInt right)
+{
+    printf("QuickSort Start...\n");
+    if(left > right)
+        return;
+    
+    myInt l = left;
+    myInt r = right;
+    Array pivot;
+    sort00_init(&pivot, &array[l]);
+
+    while (l<r)
+    {
+        while(l<r && array[r].e>=pivot.e)
+        {
+            r--;
+        }
+        if(l<r)
+        {
+            sort00_init(&array[l], &array[r]);
+        }
+        while(l<r && array[l].e<=pivot.e)
+        {
+            l++;
+        }
+        if(l<r)
+        {
+            sort00_init(&array[r], &array[l]);
+        }
+        if(l>=r)//最终l是等于r的
+        {
+            sort00_init(&array[l], &pivot);
+        }
+    }
+    sort05_QuickSort(array, left, r-1); 
+    sort05_QuickSort(array, l+1, right); 
+
+    printf("QuickSort End...\n");
+}
+
