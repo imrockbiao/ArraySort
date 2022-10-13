@@ -27,5 +27,8 @@ void sort02_InsertSort(Array* array, myInt len);
 //折半插入排序
 void sort03_InsertSort2(Array* array, myInt len);
 
+//冒泡排序
+void sort04_BubbleSort(Array* array, myInt len);
+
 
 #endif

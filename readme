@@ -1,1 +1,8 @@
 # 排序算法
+
+插入排序
+1. 直接插入排序 -->sort02_InsertSort(Array* array, myInt len);
+2. 折半插入排序 -->sort03_InsertSort2(array, len);
+
+交换排序
+3. 冒泡排序    -->sort04_BubbleSort(Array* array, myInt len);

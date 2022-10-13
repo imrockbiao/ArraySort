@@ -23,7 +23,7 @@ void sort00_initArray(Array* array)
 
     for(myInt i = 0; i<LEN; i++)
     {
-        array[i].e = rand()%10 +1;//1-10之间的随机数
+        array[i].e = rand()%100 +1;//1-100之间的随机数
         array[i].id = i;
     }
     sort01_printArray(array, LEN);
@@ -38,7 +38,7 @@ void sort01_printArray(Array* array, myInt len)
     {
         printf("%d ", array[i].e);
     }
-    printf("\nover \n");
+    printf("\nprint over \n");
 }
 
 
@@ -100,3 +100,32 @@ void sort03_InsertSort2(Array* array, myInt len)
     }
     printf("InsertSort2 over...\n");
 }
+
+
+
+//冒泡排序
+void sort04_BubbleSort(Array* array, myInt len)
+{
+    printf("BubbleSort Start...\n");
+    myInt i, j;
+    Flag flag;
+    for(i = 0; i<len-1; i++)
+    {
+        flag = F;
+        for(j = len-1; j>i; j--)
+        {
+            if(array[j-1].e > array[j].e)
+            {
+                sort00_swap(&array[j-1], &array[j]);
+                flag = T;//如果进入交换说明数据仍然无序
+            }
+            
+        }
+        if(flag == F)
+        {//交换标志没有改变， 说明数据已经有序， 无序再进行比较
+            return;
+        }
+    }
+    printf("BubbleSort End...\n");
+}
+
