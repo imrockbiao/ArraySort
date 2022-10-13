@@ -171,3 +171,26 @@ void sort05_QuickSort(Array* array, myInt left, myInt right)
     printf("QuickSort End...\n");
 }
 
+
+//简单选择排序
+void sort06_SelectSort(Array* array, myInt len)
+{
+    printf("SelectSort Start...\n");
+    for(myInt i = 0; i<len-1; i++)
+    {
+        myInt min = i;
+        for(myInt j = i+1; j<len; j++)
+        {
+            if(array[j].e<array[min].e)
+            {
+                min = j; //更新最小元素下标
+            }
+        }
+        if(min != i)
+        {//如果最小元素不是最开始那个就交换
+            sort00_swap(&array[i], &array[min]);
+        }
+    }
+    printf("SelectSort End...\n");
+}
+

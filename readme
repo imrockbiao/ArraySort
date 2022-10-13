@@ -6,4 +6,7 @@
 
 交换排序
 3. 冒泡排序    -->sort04_BubbleSort(Array* array, myInt len);
-4. 快速排序
+4. 快速排序    -->sort05_QuickSort(Array* array, myInt left, myInt right)
+
+选择排序
+5. 简单选择排序
